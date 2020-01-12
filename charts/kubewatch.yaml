@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: kubewatch
+  namespace: kube-system
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kubewatch
+  template:
+    metadata:
+      labels:
+        app: kubewatch
+    spec:
+      serviceAccountName: kubewatch
+      containers:
+      - name: kubewatch
+        image: docker.io/kubewatch/kubewatch:latest
+        env:
+          - name: TOKEN
+            value: "<your token here>"
+  
