@@ -5,6 +5,6 @@ metadata:
   name: kubewatch-clusterrole
 {{ if .Values.refreshRole.rules -}}
 rules:
-{{ toYaml .Values.refreshRole.rules | indent 0 }}
+{{ toYaml .Values.kubewatchRole.rules | indent 0 }}
 {{- end }}
 {{- end }}

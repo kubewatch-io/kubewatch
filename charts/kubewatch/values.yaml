@@ -8,3 +8,38 @@ image:
 debug: false
 token: xxxx
 
+kubewatchRole:
+  enabled: true
+  rules:
+  - apiGroups:
+      - ""
+    resources:
+      - "*" 
+    verbs:
+      - list
+      - read  
+      - watch
+  - apiGroups:
+      - "rbac.authorization.k8s.io"
+    resources:
+      - "*"
+    verbs:
+      - list
+      - read
+      - watch
+  - apiGroups:
+      - "networking.k8s.io"
+    resources:
+      - "*"
+    verbs:
+      - list
+      - read
+      - watch
+  - apiGroups:
+      - "policy"
+    resources:
+      - "*"
+    verbs:
+      - list
+      - read
+      - watch
