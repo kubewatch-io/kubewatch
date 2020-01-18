@@ -1,0 +1,21 @@
+{{- if .Values.deployment.enabled -}}
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: kubewatch 
+spec:
+  replicas: 1 
+  template:
+    metadata:
+    spec:
+      containers:
+        - name: kubewatch 
+          image: "{{ .Values.image.imagerepo }}:{{ .Values.image.imagetag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+          - name: DEBUG 
+            value: "{{ .Values.debug }}"
+          - name: TOKEN 
+            value: "{{ .Values.token }}"
+      serviceAccountName: {{ .Chart.Name }}
+
