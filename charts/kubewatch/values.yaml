@@ -8,6 +8,15 @@ image:
 debug: false
 token: xxxx
 
+kubewatchSA:
+  enabled: true
+
+kubewatchRoleBind:
+  enabled: true
+
+deployment:
+  enabled: true
+
 kubewatchRole:
   enabled: true
   rules:

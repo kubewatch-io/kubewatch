@@ -18,4 +18,4 @@ spec:
           - name: TOKEN 
             value: "{{ .Values.token }}"
       serviceAccountName: {{ .Chart.Name }}
-
+{{- end}}

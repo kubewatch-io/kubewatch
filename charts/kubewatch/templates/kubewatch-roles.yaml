@@ -1,9 +1,9 @@
-{{- if .Values.refreshRole.enabled -}}
+{{- if .Values.kubewatchRole.enabled -}}
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   name: kubewatch-clusterrole
-{{ if .Values.refreshRole.rules -}}
+{{ if .Values.kubewatchRole.rules -}}
 rules:
 {{ toYaml .Values.kubewatchRole.rules | indent 0 }}
 {{- end }}
