@@ -3,5 +3,7 @@ description: A Helm chart for kubewatch.io pod
 name: kubewatch
 icon: https://kubewatch.io/img/logo-color.png
 maintainers:
-- name: kubewatch.io 
-version: 0.1 
+- name: kubewatch.io
+- email: platform@kubewatch.io
+version: 0.1
+appVersion: 0.1

@@ -3,10 +3,8 @@ image:
   imagerepo: docker.io/kubewatch/kubewatch 
   imagetag: latest 
   pullPolicy: Always
-
 # to enable debug logging
 debug: false
-token: xxxx
 
 kubewatchSA:
   enabled: true
