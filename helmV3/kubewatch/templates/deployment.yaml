@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kubewatch
+  labels:
+    app: kubewatch
+spec:
+  replicas: 1 
+  selector:
+    matchLabels:
+      app: kubewatch
+  template:
+    metadata:
+      labels:
+        app: kubewatch
+    spec:
+      containers:
+        - name: kubewatch 
+          image: "{{ .Values.image.imagerepo }}:{{ .Values.image.imagetag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+          - name: DEBUG 
+            value: "{{ .Values.debug }}"
+          - name: TOKEN 
+            value: "{{ .Values.token }}"
+      serviceAccountName: {{ .Chart.Name }}
