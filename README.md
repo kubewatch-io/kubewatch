@@ -12,7 +12,7 @@ To deploy your pod, you will find here the following templates:
 1. kubectl command in k8s-deployment
 2. helm deployment charts in the versionned directories
 
-[![helm deployment](https://asciinema.org/a/Z7QDlQTqliLGehKACRQQy49Li.svg)](https://asciinema.org/a/Z7QDlQTqliLGehKACRQQy49Li)
+![termrec](/img/kw-pod.gif)
 
 Feel free to send your feedback on our support at kubewatch.io email or join us on our slack workspace kubewatchio
 
