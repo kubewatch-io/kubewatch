@@ -1,19 +1,8 @@
-# welcome on the kubewatch.io deployment repository
+# Deprecated
 
-You will find here the different ways you have to deploy our pod.
-The main advantage to scan from your cluster vs from the platform are:
+Please use https://github.com/stacksciences/sensor for kubernetes charts or use our helm repository
 
-1. No secrets or access token from your cloud provider are required.
-2. Only inventory information is sent to the platform
-3. You can access internal services for fingerprint, SSL/TLS checks and App scanning.
+```
+helm repo add StackSciences https://app.stacksciences.com/charts/
+```
 
-To deploy your pod, you will find here the following templates:
-
-1. kubectl command in k8s-deployment
-2. helm deployment charts in the versionned directories
-
-![termrec](/img/kw-pod.gif)
-
-Feel free to send your feedback on our support at kubewatch.io email or join us on our slack workspace kubewatchio
-
--- The kubewatch.io team
